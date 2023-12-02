@@ -54,13 +54,13 @@ module.exports = (formName, path) => ([
                     `,
                     },
                 },
-                // {
-                //     map: {
-                //         key: '$data.each._id',
-                //         label: '`$data.each.name`',
-                //         value: '$data.each._id',
-                //     },
-                // },
+                
+                
+                
+                
+                
+                
+                
             ],
         },
     }, {
@@ -124,7 +124,7 @@ module.exports = (formName, path) => ([
                                                                 `,
                                                             },
                                                         }],
-                                                    }, // '$data.formState.appliesToCompanies.value.value',
+                                                    }, 
                                                 },
                                             },
                                         ],
@@ -185,13 +185,13 @@ module.exports = (formName, path) => ([
                                                     `,
                                                 },
                                             },
-                                            // {
-                                            //     map: {
-                                            //         key: '$data.each._id',
-                                            //         label: '$data.each.name',
-                                            //         value: '$data.each._id',
-                                            //     },
-                                            // },
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
                                         ],
                                     },
                                 },
@@ -317,7 +317,7 @@ module.exports = (formName, path) => ([
                                                         var studios = [];
                                                         var studioslist = values.studiosList.value.values;
                                                         var companies = values.root.companieslist.map(c=>c.label);
-                                                        console.log(companies)
+                                                        
                                                         studioslist.forEach(r=>{
                                                             if(r.name !== 'Corporate' && r.name.indexOf('Nelson')===-1){
                                                                 if(companies.indexOf(r.company.name) !== -1   && (r.name.indexOf('PYR') === -1)){
@@ -336,8 +336,8 @@ module.exports = (formName, path) => ([
                                                                 }
                                                             }
                                                         })
-                                                        console.log("STUDIOSLIST")
-                                                        console.log(studios)
+                                                        
+                                                        
                                                         return studios;
                                                     `,
                                                 },
