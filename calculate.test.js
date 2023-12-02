@@ -1,7 +1,7 @@
 import calculate from "./calculate";
 import chai from "chai";
 
-// https://github.com/chaijs/chai/issues/469
+
 chai.config.truncateThreshold = 0;
 
 const expect = chai.expect;
@@ -11,7 +11,7 @@ function pressButtons(buttons) {
   buttons.forEach(button => {
     Object.assign(value, calculate(value, button));
   });
-  // no need to distinguish between null and undefined values
+  
   Object.keys(value).forEach(key => {
     if (value[key] === null) {
       delete value[key];
@@ -69,8 +69,8 @@ describe("calculate", function() {
     total: "18",
   });
 
-  // When '=' is pressed and there is not enough information to complete
-  // an operation, the '=' should be disregarded.
+  
+  
   test(["3", "+", "=", "3", "="], {
     total: "6",
   });
@@ -132,7 +132,7 @@ describe("calculate", function() {
     total: "0.2",
   });
 
-  // should clear the operator when AC is pressed
+  
   test(["1", "+", "2", "AC"], {});
   test(["+", "2", "AC"], {});
 
@@ -150,12 +150,12 @@ describe("calculate", function() {
     next: "2",
   });
 
-  // the percentage sign should also act as '='
+  
   test(["2", "x", "2", "%"], {
     total: "0.04",
   });
 
-  //Test that pressing the multiplication or division sign multiple times should not affect the current computation
+  
   test(["2", "x", "x"], {
     total: "2",
     operation: "x"
